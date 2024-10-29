@@ -8,7 +8,6 @@ import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-
 import { getPhotos } from './js/pixabay-api';
 import { createMarkup } from './js/render-functions';
 
@@ -25,7 +24,7 @@ function submitForm(e) {
   loader.style.display = 'block';
   gallery.innerHTML = '';
   const searchPoint = e.target.elements.input.value.trim();
-  
+
   if (searchPoint.length === 0) {
     loader.style.display = 'none';
     return iziToast.error({
@@ -62,15 +61,16 @@ function submitForm(e) {
         title: 'Error',
         message: 'Something went wrong. Please try again later.',
         position: 'topRight',
-    });
+      });
     })
-    .finally(() => loader.style.display = 'none');
+    .finally(() => {
+      loader.style.display = 'none';
+    });
 
-    searchForm.reset();
+  searchForm.reset();
 }
 
-
 const lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
+  captionsData: 'alt',
+  captionDelay: 250,
 });
