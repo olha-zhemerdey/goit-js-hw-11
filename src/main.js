@@ -67,7 +67,6 @@ function submitForm(e) {
       loader.style.display = 'none';
     });
 
-  searchForm.reset();
 }
 
 const lightbox = new SimpleLightbox('.gallery a', {
