@@ -7,7 +7,7 @@ import{i as l,S as p}from"./assets/vendor-5ObWk2rO.js";(function(){const r=docum
               width="360"
             />
           </a>
-          <ul class="gallery-item-info">
+          <ul class="gallery-info">
                 <li class="info-block">
                   <h5>Likes</h5>
                   <p>${e}</p>
