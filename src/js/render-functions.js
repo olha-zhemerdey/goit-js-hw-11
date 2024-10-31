@@ -21,7 +21,7 @@ export function createMarkup(arr) {
               width="360"
             />
           </a>
-          <ul class="gallery-item-info">
+          <ul class="gallery-info">
                 <li class="info-block">
                   <h5>Likes</h5>
                   <p>${likes}</p>
